@@ -161,3 +161,6 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " :cp)
 nnoremap <silent> <C-x> :cn<CR>
 nnoremap <silent> <C-z> :cp<CR>
+
+" Map F10 to toggle nopaste for... well... pasting!
+set pastetoggle=<F10>
