@@ -208,7 +208,7 @@ of plugins above to learn more.
  * `,b` - CtrlP buffer selector - great for jumping to a file you already have open
  * `Cmd-Shift-M` - jump to method - CtrlP tag search within current buffer
  * `,jm` jump to models. Other `,j` mappings: `,jc` for controllers, `,jh` for helpers, etc. If you think of a concept and a letter, we've got you covered.
- * `Cmd-Shift-N` - NERDTree toggle (`Alt-z` in Linux)
+ * `Cmd-Shift-N` - NERDTree toggle (`F11` in Linux)
  * `Ctrl-\` - Show current file in NERDTree
  * `Cmd-Shift-P` - Clear CtrlP cache
 
