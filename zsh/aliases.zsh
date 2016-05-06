@@ -68,67 +68,6 @@ alias ve='vim ~/.vimrc'
 # zsh profile editing
 alias ze='vim ~/.zshrc'
 
-# Git Aliases
-alias gs='git status'
-alias gstsh='git stash'
-alias gst='git stash'
-alias gsp='git stash pop'
-alias gsa='git stash apply'
-alias gsh='git show'
-alias gshw='git show'
-alias gshow='git show'
-alias gi='vim .gitignore'
-alias gcm='git ci -m'
-alias gcim='git ci -m'
-alias gci='git ci'
-alias gco='git co'
-alias gcp='git cp'
-alias ga='git add -A'
-alias gap='git add -p'
-alias guns='git unstage'
-alias gunc='git uncommit'
-alias gm='git merge'
-alias gms='git merge --squash'
-alias gam='git amend --reset-author'
-alias grv='git remote -v'
-alias grr='git remote rm'
-alias grad='git remote add'
-alias gr='git rebase'
-alias gra='git rebase --abort'
-alias ggrc='git rebase --continue'
-alias gbi='git rebase --interactive'
-alias gl='git l'
-alias glg='git l'
-alias glog='git l'
-alias co='git co'
-alias gf='git fetch'
-alias gfch='git fetch'
-alias gd='git diff'
-alias gb='git b'
-alias gbd='git b -D -w'
-# Staged and cached are the same thing
-alias gdc='git diff --cached -w'
-alias gds='git diff --staged -w'
-alias gpub='grb publish'
-alias gtr='grb track'
-alias gpl='git pull'
-alias gplr='git pull --rebase'
-alias gps='git push'
-alias gpsh='git push -u origin `git rev-parse --abbrev-ref HEAD`'
-alias gnb='git nb' # new branch aka checkout -b
-alias grs='git reset'
-alias grsh='git reset --hard'
-alias gcln='git clean'
-alias gclndf='git clean -df'
-alias gclndfx='git clean -dfx'
-alias gsm='git submodule'
-alias gsmi='git submodule init'
-alias gsmu='git submodule update'
-alias gt='git t'
-alias gbg='git bisect good'
-alias gbb='git bisect bad'
-alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
-
 # Common shell functions
 alias less='less -r'
 alias tf='tail -f'
@@ -157,6 +96,139 @@ alias k9='kill -9'
 
 # Gem install
 alias sgi='sudo gem install --no-ri --no-rdoc'
+
+#Git
+alias g='git'
+
+alias ga='git add'
+alias gaa='git add --all'
+alias gapa='git add --patch'
+
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbda='git branch --merged | command grep -vE "^(\*|\s*master\s*$)" | command xargs -n 1 git branch -d'
+alias gbl='git blame -b -w'
+alias gbnm='git branch --no-merged'
+alias gbr='git branch --remote'
+alias gbs='git bisect'
+alias gbsb='git bisect bad'
+alias gbsg='git bisect good'
+alias gbsr='git bisect reset'
+alias gbss='git bisect start'
+
+alias gc='git commit -v'
+alias gc!='git commit -v --amend'
+alias gca='git commit -v -a'
+alias gca!='git commit -v -a --amend'
+alias gcan!='git commit -v -a -s --no-edit --amend'
+alias gcam='git commit -a -m'
+alias gcb='git checkout -b'
+alias gcf='git config --list'
+alias gcl='git clone --recursive'
+alias gclean='git clean -fd'
+alias gpristine='git reset --hard && git clean -dfx'
+alias gcm='git checkout master'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gcount='git shortlog -sn'
+compdef gcount=git
+alias gcp='git cherry-pick'
+alias gcs='git commit -S'
+
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
+alias gdt='git diff-tree --no-commit-id --name-only -r'
+gdv() { git diff -w "$@" | view - }
+compdef _git gdv=git-diff
+alias gdw='git diff --word-diff'
+
+alias gf='git fetch'
+alias gfa='git fetch --all --prune'
+function gfg() { git ls-files | grep $@ }
+compdef gfg=grep
+alias gfo='git fetch origin'
+
+alias gignore='git update-index --assume-unchanged'
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
+compdef git-svn-dcommit-push=git
+
+alias gk='\gitk --all --branches'
+compdef _git gk='gitk'
+alias gke='\gitk --all $(git log -g --pretty=format:%h)'
+compdef _git gke='gitk'
+
+alias gl='git pull'
+alias glg='git log --stat'
+alias glgp='git log --stat -p'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glo='git log --oneline --decorate'
+alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+alias glog='git log --oneline --decorate --graph'
+alias glp="_git_log_prettily"
+compdef _git glp=git-log
+
+alias gm='git merge'
+alias gmom='git merge origin/master'
+alias gmt='git mergetool --no-prompt'
+alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
+alias gmum='git merge upstream/master'
+
+alias gp='git push'
+alias gpd='git push --dry-run'
+alias gpoat='git push origin --all && git push origin --tags'
+compdef _git gpoat=git-push
+alias gpu='git push upstream'
+alias gpv='git push -v'
+
+alias gr='git remote'
+alias gra='git remote add'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+alias grbm='git rebase master'
+alias grbs='git rebase --skip'
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
+alias grmv='git remote rename'
+alias grrm='git remote remove'
+alias grset='git remote set-url'
+alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
+alias gru='git reset --'
+alias grup='git remote update'
+alias grv='git remote -v'
+
+alias gsb='git status -sb'
+alias gsd='git svn dcommit'
+alias gsi='git submodule init'
+alias gsps='git show --pretty=short --show-signature'
+alias gsr='git svn rebase'
+alias gss='git status -s'
+alias gst='git status'
+alias gsta='git stash'
+alias gstaa='git stash apply'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gsts='git stash show --text'
+alias gsu='git submodule update'
+
+alias gts='git tag -s'
+alias gtv='git tag | sort -V'
+
+alias gunignore='git update-index --no-assume-unchanged'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+alias gup='git pull --rebase'
+alias gupv='git pull --rebase -v'
+alias glum='git pull upstream master'
+
+alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
 
 # TODOS
 # This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
@@ -191,10 +263,8 @@ alias srdmt='spring rake db:migrate db:test:prepare'
 # Sprintly - https://github.com/nextbigsoundinc/Sprintly-GitHub
 alias sp='sprintly'
 # spb = sprintly branch - create a branch automatically based on the bug you're working on
-alias spb="git checkout -b \`sp | tail -2 | grep '#' | sed 's/^ //' | sed 's/[^A-Za-z0-9 ]//g' | sed 's/ /-/g' | cut -d"-" -f1,2,3,4,5\`"
 
 alias hpr='hub pull-request'
-alias grb='git recent-branches'
 
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
