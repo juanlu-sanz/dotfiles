@@ -29,8 +29,8 @@ nnoremap <A-[> f[ci[
 nnoremap <A-]> f]ci]
 
 " ==== NERD tree
-" Alt-Shift-N for nerd tree
-nmap <F11> :NERDTreeToggle<CR>
+" F4 for nerd tree
+nmap <F4> :NERDTreeToggle<CR>
 
 " move up/down quickly by using Alt-j, Alt-k
 " which will move us around by functions
