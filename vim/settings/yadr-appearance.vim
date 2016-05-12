@@ -22,5 +22,6 @@ else
 
 endif
 
+let base16colorspace=256
 colorscheme base16-tomorrow
 set background=dark
