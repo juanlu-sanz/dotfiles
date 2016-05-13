@@ -73,3 +73,7 @@ vmap <A-A> :Tabularize /
 
 " Source current file Alt-% (good for vim development)
 map <A-%> :so %<CR>
+
+" ====== vim-autoformat =======
+noremap <F2> :Autoformat<CR>
+au BufWrite *.cpp, *.py, *.c, *.cc, *.php, *.css, *.html, *.js :Autoformat
