@@ -1,0 +1,4 @@
+[includeIf "gitdir:~/company_a/"]
+  path = .gitconfig.company_a
+[includeIf "gitdir:~/company_b/"]
+  path = .gitconfig.company_b
