@@ -73,9 +73,9 @@ staged = '[++\($count\)](green)'
 renamed = "襁 "
 deleted = " "
 
-# [kubernetes]
-# format = 'via [ﴱ $context\($namespace\)](bold purple) '
-# disabled = false
+[kubernetes]
+format = 'via [ﴱ $context\($namespace\)](bold purple) '
+disabled = false
 
 # (deactivated because of no space left)
 # 
@@ -110,4 +110,16 @@ disabled = true
 
 [java]
 symbol = "🌟 "
+
+# ~/.config/starship.toml
+
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = 'bold blue'
+symbol = '🅰 '
+[aws.region_aliases]
+ap-southeast-2 = 'au'
+us-east-1 = 'va'
+[aws.profile_aliases]
+CompanyGroupFrobozzOnCallAccess = 'Frobozz'
 
