@@ -76,4 +76,4 @@ key_bindings:
 
 import:
   # - ~/.config/alacritty/themes/chistianlempa.yml
-  - ~/.config/alacritty/themes/base16.yml
+  - ~/.config/alacritty/themes/nord.yml

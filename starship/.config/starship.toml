@@ -10,8 +10,8 @@ command_timeout = 1000
 # ---
 # old config ...
 format = """\
-[╭╴](238)$env_var \
-$all[╰─](238)$character"""
+[╭╴](white)$env_var \
+$all[╰─](white)$character"""
 
 # new config
 # format = """$env_var $all"""
@@ -74,7 +74,7 @@ renamed = " "
 deleted = " "
 
 [kubernetes]
-format = 'via [ﴱ $context\($namespace\)](bold purple) '
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = false
 
 # (deactivated because of no space left)
