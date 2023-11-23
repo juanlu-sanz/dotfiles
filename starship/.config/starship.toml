@@ -73,9 +73,9 @@ staged = '[++\($count\)](green)'
 renamed = " "
 deleted = " "
 
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
+#[kubernetes]
+#format = 'via [󱃾 $context\($namespace\)](bold purple) '
+#disabled = false
 
 # (deactivated because of no space left)
 # 

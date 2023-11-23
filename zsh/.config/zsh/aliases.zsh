@@ -193,3 +193,9 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# Kubernetes
+
+# Openshift
+alias gn='echo "\n\n----------------------- NODES on $(date) -----------------------" && oc get nodes --show-labels | grep -i worker | grep -vi infra | awk '\''{split($0, arr, "[\t=,]"); cmd="oc get pods --field-selector spec.nodeName=" arr[14] " --no-headers 2>/dev/null | wc -l"; cmd | getline podcount; close(cmd); printf "%-40s %s %s\n", arr[14], arr[24], (podcount > 0 ? podcount : "0")}'\'' | awk '\''BEGIN {print "NODE\tAVAILABILITY_ZONE\tPOD_COUNT"} {print}'\'' | column -t && echo "\n\n----------------------- PODS on $(date) -----------------------" && oc get pods -o wide'
+
