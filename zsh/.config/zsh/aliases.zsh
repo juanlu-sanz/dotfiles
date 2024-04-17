@@ -4,9 +4,9 @@
 alias dofi="cd ~/dotfiles && nvim"
 
 # ALIAS COMMANDS
-alias ls="exa --icons --group-directories-first"
-alias ll="exa --icons --group-directories-first -l"
-alias la="exa --icons --group-directories-first -la"
+alias ls="eza --icons --group-directories-first"
+alias ll="eza --icons --group-directories-first -l"
+alias la="eza --icons --group-directories-first -la"
 
 alias grep='grep --color'
 
