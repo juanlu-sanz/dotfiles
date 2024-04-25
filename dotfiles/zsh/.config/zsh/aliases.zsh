@@ -3,7 +3,9 @@
 # Edit dotfiles
 alias dofi="cd ~/repos/dotfiles/ && nvim"
 
-alias n=nvim
+alias n="nvim"
+
+alias stw="stow -n -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)"
 
 # ALIAS COMMANDS
 #alias ls="eza --icons --group-directories-first"

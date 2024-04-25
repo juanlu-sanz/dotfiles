@@ -1,5 +1,5 @@
 for config_file in $HOME/.config/zsh/*.zsh; do
-	# echo "--------------- > Path before $config_file" 
+	# #echo "--------------- > Path before $config_file" 
 	# echo $PATH
 	source $config_file
 done

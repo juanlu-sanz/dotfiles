@@ -128,3 +128,6 @@
 [include]
   path = .gitconfig.user
 
+[user]
+	email = juanljr2@gmail.com
+	name = Juanlu Sanz
