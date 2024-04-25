@@ -1,0 +1,75 @@
+import = ["/Users/juanlu/.config/alacritty/themes/nord.toml"]
+live_config_reload = true
+
+[cursor.style]
+blinking = "Never"
+
+[font]
+#ligatures = true
+size = 15.0
+
+[font.bold]
+family = "CaskaydiaCove Nerd Font"
+style = "Regular"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font"
+style = "Light"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[shell]
+program = "/bin/zsh"
+# args = ["-l", "-c", "tmux attach || tmux"]
+#
+[window]
+dynamic_title = true
+#history = 10000
+
+[window.dimensions]
+columns = 256
+lines = 64
+
+[window.padding]
+x = 2
+y = 2
+
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"

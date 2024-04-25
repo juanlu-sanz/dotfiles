@@ -16,4 +16,5 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.colorscheme.nordic-nvim" },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
 }

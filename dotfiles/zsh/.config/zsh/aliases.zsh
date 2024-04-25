@@ -4,7 +4,7 @@
 alias dofi="cd ~/dotfiles && nvim"
 
 # ALIAS COMMANDS
-alias ls="eza --icons --group-directories-first"
+#alias ls="eza --icons --group-directories-first"
 alias ll="eza --icons --group-directories-first -l"
 alias la="eza --icons --group-directories-first -la"
 
