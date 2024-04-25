@@ -1,7 +1,9 @@
 # Alias
 
 # Edit dotfiles
-alias dofi="cd ~/dotfiles && nvim"
+alias dofi="cd ~/repos/dotfiles/ && nvim"
+
+alias n=nvim
 
 # ALIAS COMMANDS
 #alias ls="eza --icons --group-directories-first"
