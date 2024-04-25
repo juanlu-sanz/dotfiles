@@ -55,8 +55,8 @@ mods = "Control"
 
 [shell]
 program = "/bin/zsh"
-# args = ["-l", "-c", "tmux attach || tmux"]
-#
+args = ["-l", "-c", "tmux attach || tmux"]
+
 [window]
 dynamic_title = true
 #history = 10000
@@ -68,7 +68,6 @@ lines = 64
 [window.padding]
 x = 2
 y = 2
-
 
 [selection]
 save_to_clipboard = true

@@ -24,18 +24,16 @@ If you want to see all the icons properly, download a [nerdfont](https://www.ner
 
 ## Usage
 
-### 1) Clone the project on $HOME (important!)
+### 1) Clone the project wherever you want
 
 ```bash
-cd #Go home
 git clone https://github.com/juanlu-sanz/dotfiles.git #Clone repository
 ```
 
-### 2) Use GNU Stow to create the symlinks automatically
+### 2) Use GNU Stow to create the symlinks automatically (change directory accordingly)
 
 ```bash
-cd ~/dotfiles # Go to dotfiles directory
-stow */ # Create all symlinks
+stow -n -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)
 ```
 
 ### 3) Install all tmux plugins from TPM

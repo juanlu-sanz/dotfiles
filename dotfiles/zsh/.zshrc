@@ -1,4 +1,8 @@
-for config_file ($HOME/.config/zsh/*.zsh) source $config_file
+for config_file in $HOME/.config/zsh/*.zsh; do
+	# echo "--------------- > Path before $config_file" 
+	# echo $PATH
+	source $config_file
+done
 
 # history
 HISTFILE=~/.zsh_history
