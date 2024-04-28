@@ -17,4 +17,6 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.colorscheme.nordic-nvim" },
   { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.media.codesnap-nvim" },
 }
