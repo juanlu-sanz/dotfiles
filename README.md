@@ -15,7 +15,7 @@ Juanlu's personal dotfiles for Linux and MacOS, based on GNU Stow
 For a faster installation, since I mostly use brew for everything, here is a quick way to install it all.
 
 ```bash
-brew install rust python stow eza tmux starship fzf nvim go bat bottom gcc lazygit node python ripgrep gdu tree-sitter awscli openshift-cli azure-cli
+brew install rust python stow eza tmux starship fzf nvim go bat bottom gcc lazygit node python ripgrep gdu tree-sitter awscli openshift-cli azure-cli yarn
 ```
 
 ### Fonts
