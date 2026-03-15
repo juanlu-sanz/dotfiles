@@ -16,6 +16,7 @@ For a faster installation, since I mostly use brew for everything, here is a qui
 
 ```bash
 brew install rust python stow eza tmux starship fzf nvim go bat bottom gcc lazygit node python ripgrep gdu tree-sitter awscli openshift-cli azure-cli yarn fd anomalyco/tap/opencode gemini-cli
+brew install --cask claude-code
 ```
 
 ### Fonts
