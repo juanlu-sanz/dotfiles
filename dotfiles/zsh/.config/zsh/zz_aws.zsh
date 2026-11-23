@@ -1,5 +1,5 @@
-AWS_COMPLETER_DIRECTORY=$(dirname $(which aws_completer))
-export PATH=$AWS_COMPLETER_DIRECTORY/aws_completer:$PATH
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '${AWS_COMPLETER_DIRECTORY}/aws_completer' aws
+# AWS CLI completion (compinit already ran in the supercharge plugin)
+if (( $+commands[aws_completer] )); then
+  autoload -U bashcompinit && bashcompinit
+  complete -C "${commands[aws_completer]}" aws
+fi

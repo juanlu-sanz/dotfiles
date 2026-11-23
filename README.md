@@ -34,8 +34,10 @@ git clone https://github.com/juanlu-sanz/dotfiles.git #Clone repository
 ### 2) Use GNU Stow to create the symlinks automatically (change directory accordingly)
 
 ```bash
-stow -n -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)
+stow -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)
 ```
+
+Add `-n` to do a dry run first and see what would be linked without touching anything.
 
 ### 3) Install all tmux plugins from TPM
 
