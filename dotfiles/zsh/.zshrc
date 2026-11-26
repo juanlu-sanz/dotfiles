@@ -11,7 +11,6 @@ SAVEHIST=$HISTSIZE
 
 # Load Starship
 eval "$(starship init zsh)"
-[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
 # Machine-specific settings (not tracked in the dotfiles repo).
 # Put installer-added PATH lines, work env, etc. in ~/.zshrc.local
