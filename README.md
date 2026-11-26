@@ -10,7 +10,7 @@ Juanlu's personal dotfiles for Linux and MacOS, based on GNU Stow
 | ------------------------------------------ | ----------------------- |
 | [Zap](https://github.com/zap-zsh/zap)      | plugin manager for ZSH  |
 | [TPM](https://github.com/tmux-plugins/tpm) | Plugin manager for tmux |
-| [AstroNvim](https://astronvim.com/)        | nvim configuration      |
+| [AstroNvim](https://astronvim.com/)        | nvim configuration (v7) |
 
 For a faster installation, since I mostly use brew for everything, here is a quick way to install it all.
 
@@ -45,7 +45,7 @@ Check your current modifier for tmux, but since mine is `Ctrl` + `A`, then, on a
 
 ### 4) Change the font if you don't use CaskaydiaCove
 
-Head over to `~/dotfiles/alacritty/.config/alacritty/alacritty.yml` and change the `font` to whichever you like most
+Head over to `dotfiles/alacritty/.config/alacritty/alacritty.toml` and change the `font` to whichever you like most
 
 ### 5) Set up your gitconfig
 
