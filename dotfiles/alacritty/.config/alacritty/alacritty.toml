@@ -53,6 +53,12 @@ action = "DecreaseFontSize"
 key = "Minus"
 mods = "Control"
 
+# Shift+Enter inserts a newline (e.g. multiline prompts in Claude Code)
+[[keyboard.bindings]]
+chars = "\u001B\r"
+key = "Return"
+mods = "Shift"
+
 [shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "tmux attach || tmux"]
