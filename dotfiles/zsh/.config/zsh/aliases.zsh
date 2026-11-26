@@ -5,7 +5,7 @@ alias dofi="cd ~/repos/dotfiles/ && nvim"
 
 alias n="nvim"
 
-alias stw="stow -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)"
+alias stw='stow -v -d ~/repos/dotfiles/dotfiles -t ~ $(ls ~/repos/dotfiles/dotfiles/)'
 
 # ALIAS COMMANDS
 #alias ls="eza --icons --group-directories-first"
