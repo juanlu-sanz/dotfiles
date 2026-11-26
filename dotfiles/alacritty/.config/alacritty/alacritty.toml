@@ -1,4 +1,4 @@
-import = ["/Users/juanlu/.config/alacritty/themes/nord.toml"]
+import = ["~/.config/alacritty/themes/nord.toml"]
 live_config_reload = true
 
 [cursor.style]
