@@ -15,7 +15,7 @@ return {
       init = { -- this table overrides highlights in all themes
         -- Normal = { bg = "#000000" },
       },
-      astrotheme = { -- a table of overrides/changes when applying the astrotheme theme
+      nordic = { -- a table of overrides/changes when applying the nordic theme
         -- Normal = { bg = "#000000" },
       },
     },
