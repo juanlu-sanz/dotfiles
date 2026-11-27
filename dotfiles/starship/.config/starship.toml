@@ -126,3 +126,13 @@ symbol = "🌟 "
 
 [conda]
 format = '[$symbol$environment](dimmed green) '
+
+# Use single-width Nerd Font icons instead of the default "☁️" emoji.
+# The emoji variation selector (U+FE0F) makes tmux count it as 2 columns while
+# Alacritty draws 1, which shifts the cursor and leaves stray border fragments
+# in split panes.
+[aws]
+symbol = " "
+
+[gcloud]
+symbol = " "
