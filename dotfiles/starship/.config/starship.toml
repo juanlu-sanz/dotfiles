@@ -132,7 +132,9 @@ format = '[$symbol$environment](dimmed green) '
 # Alacritty draws 1, which shifts the cursor and leaves stray border fragments
 # in split panes.
 [aws]
+disabled = true
 symbol = " "
 
 [gcloud]
+disabled = true
 symbol = " "
